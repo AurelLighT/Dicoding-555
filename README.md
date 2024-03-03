@@ -7,8 +7,8 @@
 
 ```
 python -m venv venv
-pip install -r requirements.txt
 venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
 ## Run streamlit app
