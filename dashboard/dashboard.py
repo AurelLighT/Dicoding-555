@@ -29,7 +29,7 @@ def create_sum_order_items_df(df):
 
 
 def create_rfm_df(df):
-    orders_df = pd.read_csv("orders_df.csv")
+    orders_df = pd.read_csv("dashboard/orders_df.csv")
     orders_df['order_purchase_timestamp'] = pd.to_datetime(orders_df['order_purchase_timestamp'])
 
     rfm_df = all_df.groupby(by="customer_id", as_index=False).agg({
@@ -47,7 +47,7 @@ def create_rfm_df(df):
     rfm_df.drop("max_order_timestamp", axis=1, inplace=True)
     return rfm_df
 
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("dashboard/all_data.csv")
 
 
 # datetime_columns = ["shipping_limit_date", "order_purchase_timestamp", "order_approved_at", 
